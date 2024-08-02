@@ -2,12 +2,14 @@ import { Badge, Search} from '@mui/icons-material';
 import React from 'react'
 import styled from 'styled-components'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-
+import {mobile} from "../responsive";
 
 
 
 const Container=styled.div `
 height:80px;
+ height: 60px;
+  ${mobile({ height: "50px" })}
 
 `;
 const Wrapper=styled.div `
@@ -15,6 +17,7 @@ const Wrapper=styled.div `
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${mobile({ padding: "10px 0px" })}
 `;
 const Left=styled.div `
 flex: 1;
@@ -36,6 +39,7 @@ justify-content: flex-end;
 const Language=styled.span `
 font-size: 14px;
 cursor: pointer;
+ ${mobile({ display: "none" })}
     
 `
 const MenuItem=styled.div `
@@ -47,6 +51,8 @@ const MenuItem=styled.div `
 
 const Input=styled.input`
 border: none;
+  ${mobile({ width: "50px" })}
+
   
 `
 const Logo=styled.h1 `
@@ -58,6 +64,7 @@ const SearchContainer=styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+  
 `
 
 
